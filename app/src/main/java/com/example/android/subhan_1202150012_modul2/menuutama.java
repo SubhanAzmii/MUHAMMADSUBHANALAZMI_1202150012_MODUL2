@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class menuutama extends AppCompatActivity {
     //deklarasi variable
@@ -32,9 +33,13 @@ public class menuutama extends AppCompatActivity {
         if (selectedid == rb1.getId()){
             Intent intent = new Intent(this, takeaway.class);
             startActivity(intent);
+            Toast toast = Toast.makeText(this, "Take Away ", Toast.LENGTH_LONG);
+            toast.show();
         }else if (selectedid == rb2.getId()){
             Intent intent = new Intent(this, dinein.class);
             startActivity(intent);
+            Toast toast = Toast.makeText(this, "Dine In ", Toast.LENGTH_LONG);
+            toast.show();
         }
     }
 }
